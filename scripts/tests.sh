@@ -22,9 +22,9 @@ function container_test () {
 }
 
 if [[ $what_to_test == "build" ]]; then
-  build_test
+  build_test |& tee /home/vagrant/logs/$project_name-build_test-$(date --iso-8601=seconds).log
 elif [[ $what_to_test == "container" ]]; then
-  container_test
+  container_test |& tee /home/vagrant/logs/$project_name-container_test-$(date --iso-8601=seconds).log
 else
   echo "Wrong parameter choice for test"
 fi

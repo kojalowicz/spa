@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/logs":{"create":true,"guestpath":"/home/vagrant/logs","hostpath":"/home/kojalowi/work/some_develepment/spa/logs","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/kojalowi/work/some_develepment/spa","disabled":false,"__vagrantfile":true}}}
