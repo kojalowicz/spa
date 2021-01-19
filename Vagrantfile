@@ -4,6 +4,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.10.11"
   config.vm.network "forwarded_port", guest: 8080, host: 8080
   config.vm.provision "file", source: "./configuration/env.conf", destination: "/home/vagrant/env.conf"
+  config.vm.synced_folder "./logs", "/home/vagrant/logs", create: true
   config.vm.provision :shell, path: "./scripts/requirements.sh"
   config.vm.provision :shell, path: "./scripts/registry.sh"
   config.vm.provision :shell, path: "./scripts/build.sh"
