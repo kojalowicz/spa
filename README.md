@@ -2,26 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
-## Development server
+## Requirements
+installed vagrant and docker provider for vagrant
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Deploy environment
 
-## Code scaffolding
+Run `vagrant up` for a set-up environment.
+    In environment your application will be downloaded from git repository then built, tested, containerized, published in the docker registry and on the end run. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Stop environment
 
-## Build
+Run `vagrant halt` for a stop environment.
+    To run it again just run `vagrant up`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Turn it down environment
 
-## Running unit tests
+Run `vagrant destroy` for a turn it down environment.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Connect to a virtual machine
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `vagrant ssh` for connect to virtual machine with your application.
+ 
