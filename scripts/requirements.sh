@@ -10,4 +10,5 @@ function requirements () {
   npm install -g @angular/cli --unsafe-perm=true
 }
 
+set -o pipefail
 requirements |& tee $logs_dir/$project_name-requirements-instalation-$(date --iso-8601=seconds).log

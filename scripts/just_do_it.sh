@@ -2,7 +2,6 @@
 
 . /home/vagrant/env.conf
 
-
 function run_container () {
   if docker  container ls --filter name=$project_name | grep "$project_name" ; then
       echo "Your container is running"
@@ -15,4 +14,5 @@ function run_container () {
   fi
   }
 
+set -o pipefail
 run_container |& tee $logs_dir/$project_name-runig-container-$(date --iso-8601=seconds).log
