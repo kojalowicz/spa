@@ -1,0 +1,9 @@
+++ docker run -it --name spa -d -p 8080:80 spa:0.1
+Unable to find image 'spa:0.1' locally
+docker: Error response from daemon: pull access denied for spa, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+++ grep -w '200\|301'
+++ curl -I localhost:8080
+++ echo 'Test it docker is up - docker fail :('
+Test it docker is up - docker fail :(
+++ exit 1

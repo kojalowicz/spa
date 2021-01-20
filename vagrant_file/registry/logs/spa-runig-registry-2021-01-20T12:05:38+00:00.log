@@ -1,0 +1,27 @@
+Unable to find image 'registry:latest' locally
+latest: Pulling from library/registry
+0a6724ff3fcd: Pulling fs layer
+d550a247d74f: Pulling fs layer
+1a938458ca36: Pulling fs layer
+acd758c36fc9: Pulling fs layer
+9af6d68b484a: Pulling fs layer
+acd758c36fc9: Waiting
+9af6d68b484a: Waiting
+d550a247d74f: Verifying Checksum
+d550a247d74f: Download complete
+0a6724ff3fcd: Verifying Checksum
+0a6724ff3fcd: Download complete
+0a6724ff3fcd: Pull complete
+d550a247d74f: Pull complete
+1a938458ca36: Verifying Checksum
+1a938458ca36: Download complete
+acd758c36fc9: Verifying Checksum
+acd758c36fc9: Download complete
+1a938458ca36: Pull complete
+9af6d68b484a: Verifying Checksum
+9af6d68b484a: Download complete
+acd758c36fc9: Pull complete
+9af6d68b484a: Pull complete
+Digest: sha256:d5459fcb27aecc752520df4b492b08358a1912fcdfa454f7d2101d4b09991daa
+Status: Downloaded newer image for registry:latest
+43f90890439a80d3fda331a8aa6e6c011b96272e7a4031f281d3ebc3d4effd94

@@ -1,0 +1,11 @@
+++ docker run -it --name spa -d -p 8080:80 spa:0.1
+8fa3cee48fb29b7583f9b63b5d41f02f830e3ad17a908313458a97e34eb1c66a
+++ grep -w '200\|301'
+++ curl -I localhost:8080
+HTTP/1.1 200 OK
+++ echo 'Test it docker is up - OK, good job :D!'
+Test it docker is up - OK, good job :D!
+++ docker stop spa
+spa
+++ docker rm spa
+spa

@@ -1,0 +1,3 @@
+++ cp /home/vagrant/spa/configuration/deamon.json /etc/docker/daemon.json
+++ systemctl restart docker.socket
+++ systemctl restart docker

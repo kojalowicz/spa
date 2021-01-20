@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/bin/bash -ex
+
+what_to_do=$1
 
 . /home/vagrant/env.conf
 
@@ -12,9 +14,18 @@ function build () {
   cd $work_dir
   docker build -t $registry_url:$registry_port/$project_name:$project_version .
   . $work_dir/scripts/tests.sh container
-  docker push $registry_url:$registry_port/$project_name:$project_version
-  cd ~/
-  rm -r $work_dir
 }
 
-build |& tee $logs_dir/$project_name-build-full-$(date --iso-8601=seconds).log
+function docker_push() {
+  docker push $registry_url:$registry_port/$project_name:$project_version
+}
+
+# docker run -d -e REGISTRY_HTTP_ADDR=192.168.10.12:5000 -p 5000:5000 --name registry registry
+set -o pipefail
+if [[ -z $what_to_do ]]; then
+  (build && docker_push) |& tee $logs_dir/$project_name-build-full-$(date --iso-8601=seconds).log
+elif [[ $what_to_do == "test" ]]; then
+  build |& tee $logs_dir/$project_name-just-build-$(date --iso-8601=seconds).log
+else
+  echo "Wrong parameter choice for build"
+fi

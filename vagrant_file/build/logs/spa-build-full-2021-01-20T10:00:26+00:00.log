@@ -1,0 +1,7 @@
++ docker push spa:0.1
+The push refers to repository [docker.io/library/spa]
+7d7fbaf27b59: Preparing
+789caf04c307: Preparing
+fbe0fc9bcf95: Preparing
+f1b5933fe4b5: Preparing
+denied: requested access to the resource is denied

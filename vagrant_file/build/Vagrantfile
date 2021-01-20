@@ -1,0 +1,11 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-20.04"
+  config.vm.provision :docker
+  config.vm.network "private_network", ip: "192.168.10.11"
+  config.vm.provision "file", source: "../../configuration/env.conf", destination: "/home/vagrant/env.conf"
+  config.vm.provision "file", source: "../../configuration/daemon.json", destination: "/home/vagrant/daemon.json"
+  config.vm.synced_folder "./logs", "/home/vagrant/logs", create: true
+  config.vm.provision :shell, path: "../../scripts/requirements.sh"
+  config.vm.provision :shell, path: "../../scripts/docker_daemon.sh"
+  config.vm.provision :shell, path: "../../scripts/build.sh"
+end

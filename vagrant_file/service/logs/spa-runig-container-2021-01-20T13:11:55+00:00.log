@@ -1,0 +1,23 @@
+Your container is getting up
+Unable to find image '192.168.10.12:5000/spa:0.1' locally
+0.1: Pulling from spa
+e7c96db7181b: Pulling fs layer
+3fb6217217ef: Pulling fs layer
+2b6afb716628: Pulling fs layer
+3f1721475045: Pulling fs layer
+3f1721475045: Waiting
+2b6afb716628: Verifying Checksum
+2b6afb716628: Download complete
+e7c96db7181b: Verifying Checksum
+e7c96db7181b: Download complete
+3f1721475045: Verifying Checksum
+3f1721475045: Download complete
+3fb6217217ef: Verifying Checksum
+3fb6217217ef: Download complete
+e7c96db7181b: Pull complete
+3fb6217217ef: Pull complete
+2b6afb716628: Pull complete
+3f1721475045: Pull complete
+Digest: sha256:1d11e6ef6677dd1ef17c01a3cb5526653046b3633f6ce1fb246f310d846c8585
+Status: Downloaded newer image for 192.168.10.12:5000/spa:0.1
+9a596ecd80f9648d1d06cae69f7b484601cd23e6716091f63233777f4ddc18ee
