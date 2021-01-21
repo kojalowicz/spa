@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-. /home/vagrant/env.conf
+. /home/vagrant/configuration/env.conf
 
 function run_container () {
   if docker  container ls --filter name=$project_name | grep "$project_name" ; then
