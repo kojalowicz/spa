@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-. /home/vagrant/env.conf
+. /home/vagrant/configuration/env.conf
 
 function requirements () {
   wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub|sudo apt-key add -

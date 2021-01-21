@@ -2,7 +2,7 @@
 
 what_to_test=$1
 
-. /home/vagrant/env.conf
+. /home/vagrant/configuration/env.conf
 
 function build_test () {
   set -o pipefail
